@@ -230,11 +230,11 @@ proc place_corners { args } {
   pad::place_corner $master $index
 }
 
-sta::define_cmd_args "place_pad" {[-master master] \
+sta::define_cmd_args "place_pad" {name \
+                                  [-master master] \
                                   -row row_name \
                                   -location x_or_y_offset \
-                                  -mirror \
-                                  name}
+                                  -mirror}
 
 proc place_pad { args } {
   sta::parse_key_args "place_pad" args \
